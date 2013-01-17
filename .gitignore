@@ -1,0 +1,18 @@
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+sdist
+develop-eggs
+.installed.cfg
+
+# Unit test / coverage reports
+.coverage
+
+# Sphinx build output
+docs/_build
