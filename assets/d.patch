@@ -1,0 +1,17 @@
+--- a	2013-01-16 00:24:16.729570763 +0100
++++ b	2013-01-16 00:25:14.085423493 +0100
+@@ -2,5 +2,4 @@
+ sadipscing elitr, sed diam nonumy
+ eirmod tempor invidunt ut labore et
+-dolore magna aliquyam erat, sed diam
+ voluptua. At vero eos et accusam et
+ justo duo dolores et ea rebum. Stet
+@@ -16,6 +15,7 @@
+ sanctus est Lorem ipsum dolor sit
+ amet. Lorem ipsum dolor sit amet,
+-consetetur sadipscing elitr, sed diam
+ nonumy eirmod tempor invidunt ut
++nonumy eirmod tempor invidunt ut
++labore et dolore magna aliquyam erat,
+ labore et dolore magna aliquyam erat,
+ sed diam voluptua. At vero eos et
