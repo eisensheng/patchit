@@ -11,8 +11,8 @@ Motivation
 
 The motivation for this package arose from the
 
-- overwhelming complexity of other patching tools written in ython,
-- their absence from the pyPI,
+- overwhelming complexity of other patching tools written in Python,
+- their absence from the PyPI,
 - their inability to inspect the unified diff content and
 - missing support to merge the patch with an arbitrary stream of lines.
 
