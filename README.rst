@@ -1,6 +1,10 @@
 Patchit
 =======
 
+.. image:: https://travis-ci.org/EisenSheng/patchit.png?branch=develop
+    :target: https://travis-ci.org/EisenSheng/patchit
+    :alt: ci build status
+
 Patchit is an MIT Licensed unified diff parsing and merge tool written in
 Python for anyone who needs a finer grain of control over unified diff
 content and to merge the diff with an arbitrary stream of lines.
@@ -11,8 +15,8 @@ Motivation
 
 The motivation for this package arose from the
 
-- overwhelming complexity of other patching tools written in ython,
-- their absence from the pyPI,
+- overwhelming complexity of other patching tools written in Python,
+- their absence from the PyPI,
 - their inability to inspect the unified diff content and
 - missing support to merge the patch with an arbitrary stream of lines.
 
