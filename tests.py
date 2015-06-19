@@ -49,11 +49,11 @@ class PatchingTestCase(unittest.TestCase):
 
     def test_patch_apply_simple(self):
         """successfully merge a simple patch on a text file."""
-        with open(_get_path_to_asset('a.patch')) as patch_hand, \
-             open(_get_path_to_asset('original_a.txt')) as source_hand:
-            patches = patchit.PatchSet.from_stream(patch_hand)
-            file_iter = (x.strip('\n') for x in iter(source_hand.readline, ''))
-            output = list(patches[0].merge(patchit.LineEnumerator(file_iter)))
+        with open(_get_path_to_asset('a.patch')) as patch_hand:
+            with open(_get_path_to_asset('original_a.txt')) as source_hand:
+                patches = patchit.PatchSet.from_stream(patch_hand)
+                file_iter = (x.strip('\n') for x in iter(source_hand.readline, ''))
+                output = list(patches[0].merge(patchit.LineEnumerator(file_iter)))
 
         self.assertEqual(output, ['Mayer, Susanne, Lager, -212',
                                   'Schmid, Carola, Geschäftsleitung, -435',
@@ -62,12 +62,12 @@ class PatchingTestCase(unittest.TestCase):
                                   'Zundel, Walter, Vertrieb, -476', ])
 
     def test_patch_multi_hunk(self):
-        with open(_get_path_to_asset('d.patch')) as patch_hand, \
-             open(_get_path_to_asset('original_d.txt')) as original_hand:
-            patches = patchit.PatchSet.from_stream(patch_hand)
-            file_iter = (x.strip('\n')
-                         for x in iter(original_hand.readline, ''))
-            output = list(patches[0].merge(file_iter))
+        with open(_get_path_to_asset('d.patch')) as patch_hand:
+            with open(_get_path_to_asset('original_d.txt')) as original_hand:
+                patches = patchit.PatchSet.from_stream(patch_hand)
+                file_iter = (x.strip('\n')
+                             for x in iter(original_hand.readline, ''))
+                output = list(patches[0].merge(file_iter))
 
         self.assertEqual(output, ['Lorem ipsum dolor sit amet, consetetur',
                                   'sadipscing elitr, sed diam nonumy',
