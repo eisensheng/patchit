@@ -36,10 +36,10 @@ class LineEnumerator(object):
     def __iter__(self):
         return self
 
-    def next(self):
+    def __next__(self):
         self.line_no, self.line = next(self.lines_enum)
         return self.line
-
+    next = __next__
 
 class Hunk(object):
     """Collection of operations concerning an isolated file chunk."""
